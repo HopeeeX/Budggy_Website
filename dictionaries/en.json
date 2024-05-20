@@ -1,0 +1,39 @@
+{
+	"hero": {
+		"title": "Name Your Price. Get Your Deal",
+		"subtitle": "Tell us what you want and how much you want to pay, we'll negotiate with every store for you — that's it!",
+		"comingSoonText": " COMING SOON ON",
+		"appStoreText": "App Store",
+		"googlePlayText": "Google Play"
+	},
+	"cta": {
+		"title": "Budggy is ready to go wherever you are!",
+		"description": "Set your price and let deals from across the nation find you! Download Budggy on any device from the App Store or Google Play and start experiencing personalized, hassle-free shopping today. Happy shopping!",
+		"comingSoonText": "COMING SOON ON"
+	},
+    "about": {
+        "title": "How Buddgy works",
+        "steps": [
+            {
+                "number": "01",
+                "heading": "Set your price",
+                "description": "Specify the price you’re willing to pay for your desired electronic items. That’s it! Sit back and relax while Budggy reaches out to each and every store in the nation that has what you want and negotiates on your behalf."
+            },
+            {
+                "number": "02",
+                "heading": "Custom alerts",
+                "description": "Receive notifications when products that match your criteria and price become available. You’ll start receiving offers from sellers across the nation—don’t worry, Budggy will sort them out for you."
+            },
+            {
+                "number": "03",
+                "heading": "Receive top offers",
+                "description": "Instead of browsing, view the best offers curated for you by our proprietary algorithm, ensuring you always get the top deals that match your preferences and price."
+            },
+            {
+                "number": "04",
+                "heading": "Easy & safe checkout",
+                "description": "Complete your purchase directly through Budggy with just a few taps, enjoying secure and swift transactions."
+            }
+        ]
+    }
+}

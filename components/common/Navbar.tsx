@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import DropDown from './buttons/DropDown';
+import Link from 'next/link';
 
 const NavBar = () => {
     const [color, setColor] = useState('');
@@ -29,8 +30,8 @@ const NavBar = () => {
                 {/*Multilingual-sm-Screen*/}
                 <div className='w-full flex flex-col justify-center items-end lg:hidden'>
                     <div className='flex flex-row gap-2'>
-                        <button className='text-[15px] underline'>English</button>
-                        <button className='text-[15px] underline'>العربية</button>
+                        <Link className='text-[15px] underline' href={'/en/'}>English</Link>
+                        <Link className='text-[15px] underline' href={'/ar/'}>العربية</Link>
                     </div>
                 </div>
                 <div className="w-full flex flex-row justify-between lg:justify-center items-center lg:gap-[216px] xl:gap-[598px]">

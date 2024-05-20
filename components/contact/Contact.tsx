@@ -2,6 +2,7 @@ import React from 'react'
 import { CiMail, CiLocationOn } from "react-icons/ci";
 import { PiPhoneThin } from "react-icons/pi";
 import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
+import Link from 'next/link';
 
 const Contact = () => {
     return (
@@ -27,15 +28,15 @@ const Contact = () => {
                             <h2 className="text-white font-semibold text-[16px]">Follow us on</h2>
                         </div>
                         <div className="flex flex-row gap-[16px] justify-center items-center">
-                            <a href="https://www.linkedin.com/company/budggy/">
+                            <Link href="https://www.linkedin.com/company/budggy/">
                                 <FaLinkedin size={21} color="white" />
-                            </a>
-                            <a href="https://twitter.com/BudggyHQ">
+                            </Link>
+                            <Link href="https://twitter.com/BudggyHQ">
                                 <FaXTwitter size={21} color="white" />
-                            </a>
-                            <a href="https://www.instagram.com/budggyhq/">
+                            </Link>
+                            <Link href="https://www.instagram.com/budggyhq/">
                                 <FaInstagram size={23} color="white" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
