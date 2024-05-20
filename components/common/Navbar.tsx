@@ -25,13 +25,25 @@ const NavBar = () => {
                 <div className='w-full flex flex-col justify-center items-center gap-[12px]'>
                     {/*Multilingual-sm-Screen*/}
                     <div className='w-full flex flex-col justify-center items-end lg:hidden'>
-                        <DropDown />
+                        <div className='flex flex-row gap-2'>
+                            <button className='text-[15px] underline'>English</button>
+                            <button className='text-[15px] underline'>Arabaic</button>
+                        </div>
                     </div>
                     <div className="w-full flex flex-row justify-between lg:justify-center items-center lg:gap-[216px] xl:gap-[598px]">
                         {/*Logo*/}
-                        <div className="w-[114px] h-[50px] lg:w-[147px] lg:h-[64px] relative">
+                        <div className="w-[114px] h-[50px] lg:w-[147px] lg:h-[64px] hidden sm:flex relative">
                             <Image
                                 src={"/assets/images/budggy-primary-logo.png"}
+                                layout="fill"
+                                objectFit='contain'
+                                quality={100}
+                                alt='budggy-logo'
+                            />
+                        </div>
+                        <div className="flex sm:hidden w-[40px] h-[40px] relative">
+                            <Image
+                                src={"/assets/images/logo-mobile.png"}
                                 layout="fill"
                                 objectFit='contain'
                                 quality={100}
