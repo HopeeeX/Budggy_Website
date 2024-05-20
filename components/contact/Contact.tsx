@@ -52,16 +52,15 @@ const Contact = () => {
                     <div className='flex flex-col gap-1 mt-[20px]'>
                         <label className='text-[14px] font-normal text-white'>Email Address</label>
                         <input
-                            id='name'
+                            id='email'
                             type='text'
                             placeholder='Your email address'
                             className='px-[15px] tracking-wide h-[52px] bg-white rounded-lg border border-[#00000014] border-opacity-80 focus:outline-none text-[16px] font-normal' />
                     </div>
                     <div className='flex flex-col gap-1 mt-[20px]'>
                         <label className='text-[14px] font-normal text-white'>Message</label>
-                        <input
-                            id='name'
-                            type='text'
+                        <textarea
+                            id='message'
                             placeholder='Write us a message...'
                             className='input-top-left tracking-wide h-[172px] bg-white rounded-lg border border-[#00000014] border-opacity-80 focus:outline-none text-[16px] font-normal text-start' />
                     </div>
