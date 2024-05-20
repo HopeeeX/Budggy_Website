@@ -4,24 +4,24 @@ import Image from 'next/image'
 import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import DropDown from './buttons/DropDown';
 
-const NavBar = () => {
+function NavBar(){
     const [scrolling, setScrolling] = useState(false);
 
     useEffect(() => {
-        console.log("Test")
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
+  
     const handleScroll = () => {
-        if (window.scrollY > 20) {
-            setScrolling(true);
-        } else {
-            setScrolling(false);
-        }}
+      if (window.scrollY > 20) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
         
         return (
-            <nav className={scrolling ? 'z-10 w-full h-[123px] lg:h-[88px] flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed bg-white' : 'z-10 w-full h-[123px] lg:h-[88px] flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed bg-transparent'}>
+            <nav className={scrolling ? `navbar-scroll z-10 w-full h-[123px] lg:h-[88px] flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed`: `navbar-sticky z-10 w-full h-[123px] lg:h-[88px] flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed`}>
                 <div className='w-full flex flex-col justify-center items-center gap-[12px]'>
                     {/*Multilingual-sm-Screen*/}
                     <div className='w-full flex flex-col justify-center items-end lg:hidden'>

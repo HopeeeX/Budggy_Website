@@ -77,18 +77,10 @@ html, body{
 }
 
 
-.navbar {
-    transition: min-height 1s ease !important;
+.navbar-sticky {
+    background-color: transparent;
 }
 
-.logo-img {
-    max-width: 120px;
-    height: auto;
-    transition: all 0.5s ease;
-}
-
-.logo-img {
-    max-width: 140px;
-    height: auto;
-    transition: all 0.5s ease;
+.navbar-scroll {
+    background-color: white;
 }
