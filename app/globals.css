@@ -5,7 +5,10 @@
 
 html, body{
     background-color: #FDFDFD;
-    height: 100%;
+    height: 100%!important;
+    width: 100vw!important;
+    max-width: 100vw!important;
+    overflow-x: hidden!important;
 }
 
 .page {
@@ -13,9 +16,79 @@ html, body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: auto;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.box-shadow {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-bg {
+    background-image: url('/assets/images/contact-form-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.input-top-left {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    padding: 10px 15px; 
+    line-height: 1.2;
+    text-align: left;
+}
+
+
+.input-top-left::placeholder {
+    text-align: left;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.cta {
+    z-index: 2; 
+    position: relative;
+    margin-bottom: -85px;
+}
+
+
+.contact {
+    z-index: 1;
+    position: relative;
+    padding-top: 130px; 
+}
+
+
+.navbar {
+    transition: min-height 1s ease !important;
+}
+
+.logo-img {
+    max-width: 120px;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+.logo-img {
+    max-width: 140px;
+    height: auto;
+    transition: all 0.5s ease;
 }

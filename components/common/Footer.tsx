@@ -16,7 +16,7 @@ const Footer = () => {
               src={"/assets/images/budggy-primary-logo.png"}
               layout="fill"
               objectFit='contain'
-              quality={75}
+              quality={100}
               alt='budggy-logo'
             />
           </div>
@@ -25,7 +25,7 @@ const Footer = () => {
               src={"/assets/images/ms-for-startups-badge.png"}
               layout="fill"
               objectFit='contain'
-              quality={75}
+              quality={100}
               alt='microsoft'
             />
           </div>
