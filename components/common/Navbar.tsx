@@ -27,7 +27,7 @@ const NavBar = () => {
                     <div className='w-full flex flex-col justify-center items-end lg:hidden'>
                         <div className='flex flex-row gap-2'>
                             <button className='text-[15px] underline'>English</button>
-                            <button className='text-[15px] underline'>Arabaic</button>
+                            <button className='text-[15px] underline'>العربية</button>
                         </div>
                     </div>
                     <div className="w-full flex flex-row justify-between lg:justify-center items-center lg:gap-[216px] xl:gap-[598px]">

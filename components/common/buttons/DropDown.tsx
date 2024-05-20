@@ -62,7 +62,7 @@ const DropDown = () => {
                                 />
                             </div>
                             <div>
-                                <h3 className="text-[#050505] font-medium text-[14px]">عربي</h3>
+                                <h3 className="text-[#050505] font-medium text-[14px]">العربية</h3>
                             </div>
                         </div>
                     </div>
