@@ -69,20 +69,20 @@ const NavBar = () => {
                                 <h2 className="text-black font-semibold text-[14px]">Follow us on</h2>
                             </div>
                             <div className="flex flex-row gap-[16px] justify-center items-center">
-                                <a href="https://www.linkedin.com/company/budggy/">
-                                    <FaLinkedin size={21} color="#050505" />
+                                <a href="https://www.linkedin.com/company/budggy/" className='text-[#050505] hover:text-[#F79400] transition-colors duration-300'>
+                                    <FaLinkedin size={21}/>
                                 </a>
-                                <a href="https://twitter.com/BudggyHQ">
-                                    <FaXTwitter size={21} color="#050505" />
+                                <a href="https://twitter.com/BudggyHQ" className='text-[#050505] hover:text-[#F79400] transition-colors duration-300'>
+                                    <FaXTwitter size={21}/>
                                 </a>
-                                <a href="https://www.instagram.com/budggyhq/">
-                                    <FaInstagram size={23} color="#050505" />
+                                <a href="https://www.instagram.com/budggyhq/" className='text-[#050505] hover:text-[#F79400] transition-colors duration-300'>
+                                    <FaInstagram size={23}/>
                                 </a>
                             </div>
                         </div>
                         {/*Button*/}
                         <div>
-                            <button className="bg-[#F79400] w-[142px] h-[51px] rounded-xl text-white text-[16px] font-medium" onClick={() => handleClickScroll('contact')}>
+                            <button className="bg-[#F79400] hover:bg-[#be8632] transition-colors duration-300 ease-in-out w-[142px] h-[51px] rounded-xl text-white text-[16px] font-medium" onClick={() => handleClickScroll('contact')}>
                                 Get in Touch
                             </button>
                         </div>
