@@ -24,8 +24,15 @@ const NavBar = () => {
         };
     }, []);
 
+    const handleClickScroll = (section: string) => {
+        const element = document.getElementById(section);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+        }
+
     return (
-        <nav className={`z-10 w-full h-[123px] lg:h-[88px] flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed transition-colors duration-500 ease-in-out ${color}`}>
+        <nav className={`z-10 w-full h-[123px] lg:h-[88px] flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed transition-colors duration-300 ease-in-out ${color}`}>
             <div className='w-full flex flex-col justify-center items-center gap-[12px]'>
                 {/*Multilingual-sm-Screen*/}
                 <div className='w-full flex flex-col justify-center items-end lg:hidden'>
@@ -75,7 +82,7 @@ const NavBar = () => {
                         </div>
                         {/*Button*/}
                         <div>
-                            <button className="bg-[#F79400] w-[142px] h-[51px] rounded-xl text-white text-[16px] font-medium">
+                            <button className="bg-[#F79400] w-[142px] h-[51px] rounded-xl text-white text-[16px] font-medium" onClick={() => handleClickScroll('contact')}>
                                 Get in Touch
                             </button>
                         </div>
