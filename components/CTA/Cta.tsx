@@ -4,12 +4,12 @@ import Image from 'next/image';
 interface CtaProps {
     t: {
         title: string;
-    description: string;
-    comingSoonText: string;
+        description: string;
+        comingSoonText: string;
     }
 }
 
-const Cta: React.FC<CtaProps> = ({t}) => {
+const Cta: React.FC<CtaProps> = ({ t }) => {
     return (
         <div className='cta bg-[#FFFBEA] rounded-[32px] mx-[4vw] xl:mx-auto pt-[56px] xl:pt-0 xl:mt-[120px] flex flex-col xl:flex-row'>
             <div className='flex flex-col justify-center items-center xl:items-start mx-[7vw] xl:mx-0 pb-[20px] xl:pb-0 xl:pl-[56px]'>
@@ -88,7 +88,6 @@ const Cta: React.FC<CtaProps> = ({t}) => {
                     alt='cta-illustration-desktop'
                 />
             </div>
-
         </div>
     );
 }

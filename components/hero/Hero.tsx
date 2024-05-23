@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { FaApple } from "react-icons/fa";
+
 
 interface HeroProps {
 	t: {
@@ -15,20 +17,20 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
 	return (
 		<div className="page flex flex-col justify-end items-center w-full pt-[130px] md:h-[100vh] md:justify-center">
 			<div className="flex flex-col items-center px-[5px] sm:px-[20px] lg:px-0">
-				<h1 className="text-[56px] md:text-[64px] font-bold text-black text-center xs:px-[20px] leading-[68px]">
+				<h1 className=" fadeInUp text-[56px] md:text-[64px] font-bold text-black text-center xs:px-[20px] leading-[68px]">
 					{t.title}
 				</h1>
-				<h2 className="text-[16px] font-normal text-black text-center pt-[4px]">
+				<h2 className="fadeInUp text-[16px] font-normal text-black text-center pt-[4px]">
 					{t.subtitle}
 				</h2>
 			</div>
 			<div className="flex flex-col sm:flex-row gap-[16px] justify-center items-center mt-[24px]">
 				<div>
-					<h2 className="text-[#F79400] text-[16px] font-bold tracking-widest text-center">
+					<h2 className="fadeInUp-delay text-[#F79400] text-[16px] font-bold tracking-widest text-center">
 						{t.comingSoonText}
 					</h2>
 				</div>
-				<div className="flex flex-row gap-[12px]">
+				<div className=" fadeInUp-delay flex flex-row gap-[12px]">
 					<div className="w-[120px] h-[44px] flex flex-row justify-center items-center rounded-[10px] bg-black gap-[4px]">
 						<div>
 							<Image
