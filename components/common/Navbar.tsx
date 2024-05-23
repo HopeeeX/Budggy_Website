@@ -38,7 +38,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav className={`z-10 w-full ${scrolling ? 'h-[64px] lg:h-[88px]' : 'h-[123px] lg:h-[88px]'} flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed transition-all md:transition-colors  duration-300 ease-in-out ${color}`}>
+        <nav className={`z-10 w-full ${scrolling ? 'h-[64px] lg:h-[88px]' : 'h-[123px] lg:h-[88px]'} flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed transition-all md:transition-colors  duration-300 ease-in-out overflow-hidden ${color}`}>
             <div className='w-full flex flex-col justify-center items-center gap-[12px]'>
                 {/* Multilingual-sm-Screen */}
                 <div className={`w-full flex flex-col justify-center items-end lg:hidden transition-opacity duration-300 ${hideMultilingual ? 'hidden' : 'lg:flex'}`}>
