@@ -32,7 +32,6 @@ const About: React.FC<AboutProps> = ({ t }) => {
                         />
                     </div>
                     {/* Installation Instructions */}
-                    
                         <div className='flex flex-col justify-start items-start'>
                             {t.steps.map((step, index) => (
                                 <FadeInSection animation='fade-in-left'>
@@ -50,7 +49,6 @@ const About: React.FC<AboutProps> = ({ t }) => {
                                 </FadeInSection>
                             ))}
                         </div>
-                    
                     {/* Image - Smaller Screens */}
                     <div className='flex xl:hidden w-[385px] h-[394px] relative'>
                         <Image
