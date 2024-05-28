@@ -13,7 +13,7 @@ const DropDown = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center relative text-left">
+        <div className="flex flex-col justify-center items-center relative text-left z-20">
             {/*Dropdown Button*/}
             <div>
                 <button className="w-[107px] h-[37px] rounded-lg bg-[#FBFBFB] flex flex-row justify-center items-center gap-[5px] border border-[#ECECEC] hover:bg-slate-200" onClick={toggleMenu}>
@@ -45,7 +45,7 @@ const DropDown = () => {
                                     width={20}
                                     height={20}
                                     quality={75}
-                                    alt="globe-icon"
+                                    alt="country_icon"
                                 />
                             </div>
                             <div>
@@ -59,7 +59,7 @@ const DropDown = () => {
                                     width={20}
                                     height={20}
                                     quality={75}
-                                    alt="globe-icon"
+                                    alt="country_icon"
                                 />
                             </div>
                             <div>
