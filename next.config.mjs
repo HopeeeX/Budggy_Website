@@ -4,10 +4,10 @@
 const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
-	// images: {
-	// 	unoptimized: true
-	// },
-	// output: "export"
+	images: {
+		unoptimized: true
+	},
+	output: "export"
 };
 
 // const millionConfig = {
