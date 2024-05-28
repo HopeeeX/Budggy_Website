@@ -3,7 +3,11 @@ import million from "million/compiler";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
-	trailingSlash: true
+	trailingSlash: true,
+	images: {
+		unoptimized: true
+	},
+	output: "export"
 };
 
 const millionConfig = {

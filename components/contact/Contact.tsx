@@ -14,11 +14,11 @@ const Contact = () => {
                         <h1 className='text-[48px] font-bold text-white text-start leading-[64px]'>Have questions? <br /> Feel free to reach out.</h1>
                         <div className='flex flex-row justify-start items-center gap-[4px] mt-[20px]'>
                             <CiMail size={23} color='white' />
-                            <h3 className='text-[18px] font-medium text-white'>engage@budggy.com</h3>
+                            <Link href="mailto: engage@budggy.com<" className='text-[18px] font-medium text-white'>engage@budggy.com</Link>
                         </div>
                         <div className='flex flex-row justify-start items-center gap-[4px] mt-[16px]'>
                             <PiPhoneThin size={23} color='white' />
-                            <h3 className='text-[18px] font-medium text-white'>+1 (628) 200-4022</h3>
+                            <Link href="tel:+1(628)200-4022" className='text-[18px] font-medium text-white'>+1 (628) 200-4022</Link>
                         </div>
                         <div className='flex flex-row justify-start items-start gap-[4px] mt-[16px]'>
                             <CiLocationOn size={23} color='white' />
