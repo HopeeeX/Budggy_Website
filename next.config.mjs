@@ -4,10 +4,13 @@ import MillionLint from "@million/lint";
 const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
-	images: {
-		unoptimized: true
-	},
-	output: "export"
+
+
+	//Comment this section when developing.
+	// images: {
+	// 	unoptimized: true
+	// },
+	// output: "export"
 };
 
 // export default nextConfig

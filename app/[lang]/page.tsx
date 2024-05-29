@@ -6,6 +6,10 @@ import Contact from '@/components/contact/Contact';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'ar' }]
+}
+
 export default async function page({
   params: { lang },
 }: {

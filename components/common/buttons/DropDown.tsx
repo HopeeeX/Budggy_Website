@@ -5,21 +5,30 @@ import { IoIosArrowDown } from "react-icons/io";
 import Link from 'next/link';
 
 const DropDown = () => {
-
-    const[isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState({
+        label: "English",
+        icon: "/assets/icons/globe.png",
+        href: "/en/"
+    });
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    const handleLanguageChange = (label: string, icon: string, href: string) => {
+        setSelectedLanguage({ label, icon, href });
+        setIsOpen(false);
+    };
+
     return (
         <div className="flex flex-col justify-center items-center relative text-left z-20">
-            {/*Dropdown Button*/}
+            {/* Dropdown Button */}
             <div>
                 <button className="w-[107px] h-[37px] rounded-lg bg-[#FBFBFB] flex flex-row justify-center items-center gap-[5px] border border-[#ECECEC] hover:bg-slate-200" onClick={toggleMenu}>
                     <div>
                         <Image
-                            src={"/assets/icons/globe.png"}
+                            src={selectedLanguage.icon}
                             width={20}
                             height={20}
                             quality={75}
@@ -27,18 +36,18 @@ const DropDown = () => {
                         />
                     </div>
                     <div>
-                        <h3 className="text-[#050505] font-medium text-[14px]">English</h3>
+                        <h3 className="text-[#050505] font-medium text-[14px]">{selectedLanguage.label}</h3>
                     </div>
                     <div className="mt-[2px]">
                         <IoIosArrowDown size={14} color="#757780" />
                     </div>
                 </button>
             </div>
-            {/*Dropdown Options*/}
+            {/* Dropdown Options */}
             {isOpen && (
                 <div className='w-[107px] absolute top-[50px] right-0 z-10 py-2 px-4 rounded-md bg-[#FBFBFB] shadow-sm ring-1 ring-black ring-opacity-5 focus:outline-none'>
                     <div className='py-1'>
-                        <Link href={"/en/"} className='flex flex-row justify-start items-center gap-[5px]'>
+                        <Link href={"/en/"} className='flex flex-row justify-start items-center gap-[5px] cursor-pointer' onClick={() => handleLanguageChange("English", "/assets/icons/english.png", "/en/")}>
                             <div>
                                 <Image
                                     src={"/assets/icons/english.png"}
@@ -52,7 +61,7 @@ const DropDown = () => {
                                 <h3 className="text-[#050505] font-medium text-[14px]">English</h3>
                             </div>
                         </Link>
-                        <Link href={"/ar/"} className='flex flex-row justify-start items-center gap-[5px]'>
+                        <Link href={"/ar/"} className='flex flex-row justify-start items-center gap-[5px] cursor-pointer' onClick={() => handleLanguageChange("العربية", "/assets/icons/jordan.png", "/ar/")}>
                             <div>
                                 <Image
                                     src={"/assets/icons/jordan.png"}
@@ -73,4 +82,5 @@ const DropDown = () => {
     )
 }
 
-export default DropDown
+export default DropDown;
+
