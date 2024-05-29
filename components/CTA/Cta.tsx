@@ -12,12 +12,12 @@ interface CtaProps {
 const Cta: React.FC<CtaProps> = ({ t }) => {
     return (
         <div className='flex flex-col justify-center items-center'>
-            <div className='cta bg-[#FFFBEA] rounded-[32px] mx-[4vw] md:w-[768px] xl:w-auto xl:mx-auto pt-[56px] xl:pt-0 xl:mt-[120px] flex flex-col xl:flex-row'>
-                <div className='flex flex-col justify-center items-center xl:items-start mx-[7vw] xl:mx-0 pb-[20px] xl:pb-0 xl:pl-[56px]'>
+            <div className='cta bg-[#FFFBEA] rounded-[32px] mx-[4vw] md:w-[768px] lg:w-[800px] xl:w-auto xl:mx-auto pt-[56px] xl:pt-0 xl:mt-[120px] flex flex-col xl:flex-row'>
+                <div className='flex flex-col justify-center items-center md:items-start mx-[7vw] xl:mx-0 pb-[20px] xl:pb-0 xl:pl-[56px]'>
                     {/* Text */}
-                    <h1 className='text-[48px] font-bold text-black text-center xl:text-start xl:w-[555px]'>{t.title}</h1>
-                    <h3 className='text-[16px] font-normal text-black text-center xl:text-start xl:w-[530px]'>{t.description}</h3>
-                    <h2 className='text-[#F79400] text-center text-[16px] font-bold tracking-widest mt-[40px] xl:text-start'>{t.comingSoonText}</h2>
+                    <h1 className='text-[48px] font-bold text-black text-center md:text-start xl:w-[555px]'>{t.title}</h1>
+                    <h3 className='text-[16px] font-normal text-black text-center md:text-start xl:w-[530px]'>{t.description}</h3>
+                    <h2 className='text-[#F79400] text-center text-[16px] font-bold tracking-widest mt-[40px] md:text-start'>{t.comingSoonText}</h2>
                     {/* Download Buttons */}
                     <div className='flex flex-row gap-[12px] mt-[10px]'>
                         {/* Apple Store */}
