@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
+import illustration_ar from "@/public/ar/assets/images/cta-illustration-ar.png"
 
 interface CtaProps {
     t: {
@@ -16,11 +17,11 @@ const Cta: React.FC<CtaProps> = ({ t }) => {
     return (
         <div className='flex flex-col justify-center items-center'>
             <div className={`cta bg-[#FFFBEA] rounded-[32px] mx-[4vw] md:w-[768px] lg:w-[800px] xl:w-auto xl:mx-auto pt-[56px] xl:pt-0 xl:mt-[120px] flex flex-col ${lang == "en" ? "xl:flex-row" : "xl:flex-row-reverse"}`}>
-                <div className={`flex flex-col justify-center items-center md:items-start mx-[7vw] xl:mx-0 pb-[20px] xl:pb-0 xl:pl-[56px] ${lang == "en" ? "xl:pl-[56px] xl:pr-0" : " xl:pl-0 xl:pr-[56px]"}`}>
+                <div className={`flex flex-col justify-center mx-[7vw] xl:mx-0 pb-[20px] xl:pb-0 xl:pl-[56px] ${lang == "en" ? "items-center md:items-start xl:pl-[56px] xl:pr-0" : "items-end xl:pl-0 xl:pr-[56px]"}`}>
                     {/* Text */}
-                    <h1 className='text-[48px] font-bold text-black text-center md:text-start xl:w-[555px]'>{t.title}</h1>
-                    <h3 className='text-[16px] font-normal text-black text-center md:text-start xl:w-[530px]'>{t.description}</h3>
-                    <h2 className='text-[#F79400] text-center text-[16px] font-bold tracking-widest mt-[40px] md:text-start'>{t.comingSoonText}</h2>
+                    <h1 className={`text-[48px] font-bold text-black text-center  xl:w-[555px] ${lang == "en" ? "md:text-start" : "md:text-end"}`}>{t.title}</h1>
+                    <h3 className={`text-[16px] font-normal text-black text-center xl:w-[530px] ${lang == "en" ? "md:text-start" : "md:text-end md:self-end"}`}>{t.description}</h3>
+                    <h2 className={`text-[#F79400] text-center text-[16px] font-bold tracking-widest mt-[40px] ${lang == "en" ? "md:text-start" : "md:text-end"}`}>{t.comingSoonText}</h2>
                     {/* Download Buttons */}
                     <div className='flex flex-row gap-[12px] mt-[10px]'>
                         {/* Apple Store */}
@@ -94,11 +95,12 @@ const Cta: React.FC<CtaProps> = ({ t }) => {
                 </div>
                 <div className={`${lang == "en" ? "hidden" : " hidden xl:flex w-[629px] h-[480px] relative"}`}>
                     <Image
-                        src={"/assets/images/cta-illustration-AR.png"}
+                        src={illustration_ar}
                         layout="fill"
                         objectFit='fill'
                         quality={100}
-                        alt='cta-illustration-AR-desktop'
+                        alt='cta-illustration-ar-desktop'
+                        className='rounded-t-[32px]'
                     />
                 </div>
             </div>

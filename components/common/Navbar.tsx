@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ t }) => {
                 </div>
                 <div className={`w-full flex ${lang == "en" ? "flex-row" : "flex-row-reverse"} justify-between lg:justify-center items-center lg:gap-[216px] xl:gap-[598px]`}>
                     {/* Logo */}
-                    <div className={`${scrolling ? 'w-[114px] h-[40px] lg:w-[120px] lg:h-[50px]' : 'w-[114px] h-[50px] lg:w-[147px] lg:h-[64px]'} transition-all duration-300 hidden sm:flex relative`}>
+                    <div onClick={() => {location.reload()}} className={`${scrolling ? 'w-[114px] h-[40px] lg:w-[120px] lg:h-[50px]' : 'w-[114px] h-[50px] lg:w-[147px] lg:h-[64px]'} transition-all duration-300 hidden sm:flex relative`}>
                         <Image
                             src={"/assets/images/budggy-primary-logo.png"}
                             layout="fill"

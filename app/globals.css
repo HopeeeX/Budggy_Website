@@ -57,6 +57,11 @@ html, body{
     justify-content: flex-end;
 }
 
+.button-container-ar {
+  display: flex;
+  justify-content: flex-start;
+}
+
 /* Container Position/Alignment */
 .cta {
     z-index: 2; 
