@@ -78,6 +78,12 @@ const Navbar: React.FC<NavbarProps> = ({ t }) => {
                     </div>
                     {/* Details */}
                     <div className={`flex ${lang == "en" ? "flex-row" : "flex-row-reverse"} gap-[24px]`}>
+                        {/* Button - AR */}
+                        <div className={`${lang == "en" ? "hidden" : "flex"}`}>
+                            <button className="bg-[#F79400] hover:bg-[#be8632] transition-colors duration-300 ease-in-out w-[114px] h-[31px] md:w-[142px] md:h-[51px] rounded-xl text-white text-[16px] font-medium" onClick={() => handleClickScroll('contact')}>
+                                {t.button}
+                            </button>
+                        </div>
                         {/* Socials */}
                         <div className={`hidden sm:flex ${lang == "en" ? "flex-row" : "flex-row-reverse"} justify-center items-center gap-[6px]`}>
                             <div>
@@ -96,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ t }) => {
                             </div>
                         </div>
                         {/* Button */}
-                        <div>
+                        <div className={`${lang == "en" ? "flex" : "hidden"}`}>
                             <button className="bg-[#F79400] hover:bg-[#be8632] transition-colors duration-300 ease-in-out w-[114px] h-[31px] md:w-[142px] md:h-[51px] rounded-xl text-white text-[16px] font-medium" onClick={() => handleClickScroll('contact')}>
                                 {t.button}
                             </button>
