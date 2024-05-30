@@ -25,7 +25,7 @@ const config: Config = {
 
       '2xl': '1600px',
       // => @media (min-width: 1600px) { ... }
-    }
+    },
   },
   plugins: [],
 };

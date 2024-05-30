@@ -1,4 +1,8 @@
 {
+    "navbar": {
+		"button": "Get in Touch",
+		"socials": "Follow us on"
+	},
 	"hero": {
 		"title": "Name Your Price. Get Your Deal",
 		"subtitle": "Tell us what you want and how much you want to pay, we'll negotiate with every store for you — that's it!",
@@ -35,5 +39,21 @@
                 "description": "Complete your purchase directly through Budggy with just a few taps, enjoying secure and swift transactions."
             }
         ]
-    }
+    },
+    "contact" : {
+		"title" : "Have questions? <br /> Feel free to reach out.",
+		"socials" : "Follow us on",
+		"name" : "Name",
+		"nameFieldPlaceholder" : "Your Name",
+		"emailAddress" : "Email Address",
+		"emailAddressFieldPlaceholder" : "Your Email Address",
+		"mesage" : "Message",
+		"messageFieldPlaceholder": "Write us a nessage...",
+		"button" : "Send Message"
+	},
+	"footer" : {
+		"termsAndConditions" : "Terms and Conditions",
+		"privacyPolicy" : "Privacy Policy",
+		"copyright" : "All Rights Reserved"
+	}
 }

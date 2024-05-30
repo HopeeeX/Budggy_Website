@@ -1,5 +1,7 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 
 interface CtaProps {
     t: {
@@ -10,10 +12,11 @@ interface CtaProps {
 }
 
 const Cta: React.FC<CtaProps> = ({ t }) => {
+    const { lang } = useParams()
     return (
         <div className='flex flex-col justify-center items-center'>
-            <div className='cta bg-[#FFFBEA] rounded-[32px] mx-[4vw] md:w-[768px] lg:w-[800px] xl:w-auto xl:mx-auto pt-[56px] xl:pt-0 xl:mt-[120px] flex flex-col xl:flex-row'>
-                <div className='flex flex-col justify-center items-center md:items-start mx-[7vw] xl:mx-0 pb-[20px] xl:pb-0 xl:pl-[56px]'>
+            <div className={`cta bg-[#FFFBEA] rounded-[32px] mx-[4vw] md:w-[768px] lg:w-[800px] xl:w-auto xl:mx-auto pt-[56px] xl:pt-0 xl:mt-[120px] flex flex-col ${lang == "en" ? "xl:flex-row" : "xl:flex-row-reverse"}`}>
+                <div className={`flex flex-col justify-center items-center md:items-start mx-[7vw] xl:mx-0 pb-[20px] xl:pb-0 xl:pl-[56px] ${lang == "en" ? "xl:pl-[56px] xl:pr-0" : " xl:pl-0 xl:pr-[56px]"}`}>
                     {/* Text */}
                     <h1 className='text-[48px] font-bold text-black text-center md:text-start xl:w-[555px]'>{t.title}</h1>
                     <h3 className='text-[16px] font-normal text-black text-center md:text-start xl:w-[530px]'>{t.description}</h3>
@@ -80,13 +83,22 @@ const Cta: React.FC<CtaProps> = ({ t }) => {
                     />
                 </div>
                 {/* Desktop */}
-                <div className='hidden xl:flex w-[629px] h-[480px] relative'>
+                <div className={`${lang == "en" ? "hidden xl:flex w-[629px] h-[480px] relative" : "hidden"}`}>
                     <Image
                         src={"/assets/images/cta-illustration-desktop.png"}
                         layout="fill"
                         objectFit='fill'
                         quality={100}
                         alt='cta-illustration-desktop'
+                    />
+                </div>
+                <div className={`${lang == "en" ? "hidden" : " hidden xl:flex w-[629px] h-[480px] relative"}`}>
+                    <Image
+                        src={"/assets/images/cta-illustration-AR.png"}
+                        layout="fill"
+                        objectFit='fill'
+                        quality={100}
+                        alt='cta-illustration-AR-desktop'
                     />
                 </div>
             </div>

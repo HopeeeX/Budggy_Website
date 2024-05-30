@@ -1,7 +1,7 @@
+'use client'
 import React from "react";
 import Image from "next/image";
-import { FaApple } from "react-icons/fa";
-
+import { useParams } from 'next/navigation';
 
 interface HeroProps {
 	t: {
@@ -14,6 +14,8 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ t }) => {
+	const { lang } = useParams()
+
 	return (
 		<div className="page flex flex-col justify-end items-center w-full pt-[130px] md:h-[100vh] md:justify-center">
 			<div className="flex flex-col items-center px-[5px] sm:px-[20px] lg:px-0">
@@ -24,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
 					{t.subtitle}
 				</h2>
 			</div>
-			<div className="flex flex-col sm:flex-row gap-[16px] justify-center items-center mt-[24px]">
+			<div className={`flex flex-col ${lang == "en" ? "sm:flex-row" : "sm:flex-row-reverse"} gap-[16px] justify-center items-center mt-[24px]`}>
 				<div>
 					<h2 className="fadeInUp-delay text-[#F79400] text-[16px] font-bold tracking-widest text-center">
 						{t.comingSoonText}

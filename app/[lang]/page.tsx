@@ -22,7 +22,7 @@ export default async function page({
       <Hero t={dictionary.hero} />
       <About  t={dictionary.about}/>
       <CTA t={dictionary.cta} />
-      <Contact />
+      <Contact t = {dictionary.contact}/>
     </div>
   )
 }

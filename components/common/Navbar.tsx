@@ -4,8 +4,17 @@ import Image from 'next/image';
 import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import DropDown from './buttons/DropDown';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
-const NavBar = () => {
+interface NavbarProps {
+    t: {
+        button: string,
+        socials: string
+    }
+}
+
+const Navbar: React.FC<NavbarProps> = ({ t }) => {
+    const { lang } = useParams()
     const [color, setColor] = useState('');
     const [hideMultilingual, setHideMultilingual] = useState(false);
     const [scrolling, setScrolling] = useState(false);
@@ -39,7 +48,7 @@ const NavBar = () => {
 
     return (
         <nav className={`${scrolling ? 'h-[64px]' : 'h-[123px]'} lg:h-[88px] z-10 w-full flex flex-col justify-center items-center px-[10px] sm:px-[20px] lg:px-0 fixed transition-all md:transition-colors  duration-300 ease-in-out ${color}`}>
-            <div className='w-full flex flex-col justify-center items-center gap-[12px]'>
+            <div className={`w-full flex flex-col justify-center items-center gap-[12px]`}>
                 {/* Multilingual-sm-Screen */}
                 <div className={`w-full flex flex-col justify-center items-end lg:hidden transition-opacity duration-300 ${hideMultilingual ? 'hidden' : 'lg:flex'}`}>
                     <div className='flex flex-row gap-2'>
@@ -47,7 +56,7 @@ const NavBar = () => {
                         <Link className='text-[15px] underline' href={'/ar/'}>العربية</Link>
                     </div>
                 </div>
-                <div className="w-full flex flex-row justify-between lg:justify-center items-center lg:gap-[216px] xl:gap-[598px]">
+                <div className={`w-full flex ${lang == "en" ? "flex-row" : "flex-row-reverse"} justify-between lg:justify-center items-center lg:gap-[216px] xl:gap-[598px]`}>
                     {/* Logo */}
                     <div className={`${scrolling ? 'w-[114px] h-[40px] lg:w-[120px] lg:h-[50px]' : 'w-[114px] h-[50px] lg:w-[147px] lg:h-[64px]'} transition-all duration-300 hidden sm:flex relative`}>
                         <Image
@@ -68,11 +77,11 @@ const NavBar = () => {
                         />
                     </div>
                     {/* Details */}
-                    <div className="flex flex-row gap-[24px]">
+                    <div className={`flex ${lang == "en" ? "flex-row" : "flex-row-reverse"} gap-[24px]`}>
                         {/* Socials */}
-                        <div className="hidden sm:flex flex-row justify-center items-center gap-[6px]">
+                        <div className={`hidden sm:flex ${lang == "en" ? "flex-row" : "flex-row-reverse"} justify-center items-center gap-[6px]`}>
                             <div>
-                                <h2 className="text-black font-semibold text-[14px]">Follow us on</h2>
+                                <h2 className="text-black font-semibold text-[14px]">{t.socials}</h2>
                             </div>
                             <div className="flex flex-row gap-[16px] justify-center items-center">
                                 <a href="https://www.linkedin.com/company/budggy/" className='text-[#050505] hover:text-[#F79400] transition-colors duration-300'>
@@ -89,7 +98,7 @@ const NavBar = () => {
                         {/* Button */}
                         <div>
                             <button className="bg-[#F79400] hover:bg-[#be8632] transition-colors duration-300 ease-in-out w-[114px] h-[31px] md:w-[142px] md:h-[51px] rounded-xl text-white text-[16px] font-medium" onClick={() => handleClickScroll('contact')}>
-                                Get in Touch
+                                {t.button}
                             </button>
                         </div>
                         {/* Multilingual-lg-Screen */}
@@ -103,4 +112,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Navbar;

@@ -2,8 +2,17 @@ import React from "react";
 // import {colors} from '../../app/colors';  
 import Image from 'next/image'
 import Link from 'next/link'
+import { useParams } from 'next/navigation';
 
-const Footer = () => {
+interface FooterProps {
+    t: {
+      termsAndConditions : string,
+      privacyPolicy : string,
+      copyright : string,
+    }
+}
+
+const Footer: React.FC<FooterProps> = ({ t }) => {
 
   return (
     <footer className='w-full'>
@@ -35,16 +44,16 @@ const Footer = () => {
         {/*Links*/}
         <div className='flex flex-row justify-center items-center gap-[12px]'>
           <Link href={""} className='font-normal text-[14px] text-[#050505]'>
-            Terms & Conditions
+            {t.termsAndConditions}
           </Link>
           <Link href={""} className='font-normal text-[14px] text-[#050505]'>
-            Privacy Policy
+            {t.privacyPolicy}
           </Link>
         </div>
       </div>
       {/*Footer 2*/}
       <div className=" bg-[#481700] w-full h-[39px] flex flex-col justify-center items-center">
-        <h2 className='font-normal text-[10px] text-center text-white'>© 2024 Budggy, Inc. | All Rights Reserved</h2>
+        <h2 className='font-normal text-[10px] text-center text-white'>© 2024 Budggy, Inc. | {t.copyright}</h2>
       </div>
     </footer>
   )
