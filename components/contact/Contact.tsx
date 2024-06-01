@@ -6,6 +6,7 @@ import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import Link from 'next/link';
 import FadeInSection from '../about/FadeInSection';
 import { useParams } from 'next/navigation';
+import { inter, noto } from '@/lang';
 
 interface ContactProps {
     t: {
@@ -28,8 +29,8 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
         <FadeInSection animation='fade-in-top'>
             <div className='contact w-full contact-bg flex flex-col justify-center items-center' id='contact'>
                 <div className={`w-full flex flex-col ${lang == "en" ? "xl:flex-row xl:gap-[80px]" : "xl:flex-row-reverse xl:gap-[70px]"} justify-center px-[5vw] mb-[48px]`}>
-                    <div className='flex flex-col'>
-                        <h1 className={`text-[48px] font-bold text-white text-start ${lang == "en" ? "text-start" : "text-end"} leading-[64px]`} dangerouslySetInnerHTML={{__html: t.title}}></h1>
+                    <div className={`${inter.className} flex flex-col`}>
+                        <h1 className={`${noto.className} text-[48px] font-bold text-white text-start ${lang == "en" ? "text-start" : "text-end"} leading-[64px]`} dangerouslySetInnerHTML={{__html: t.title}}></h1>
                         <div className={`${lang == "en" ? "flex flex-row" : "flex flex-row-reverse"} justify-start items-center gap-[4px] mt-[20px]`}>
                             <CiMail size={23} color='white' />
                             <Link href="mailto: engage@budggy.com<" className='text-[18px] font-medium text-white'>engage@budggy.com</Link>

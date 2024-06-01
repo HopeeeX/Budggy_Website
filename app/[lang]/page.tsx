@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Hero from "@/components/hero/Hero";
 import About from '@/components/about/About';
 import CTA from '@/components/CTA/Cta';
@@ -7,10 +7,10 @@ import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'ar' }]
+  return [{ lang: 'en' }, { lang: 'ar' }];
 }
 
-export default async function page({
+export default async function Page({
   params: { lang },
 }: {
   params: { lang: Locale };
@@ -20,9 +20,9 @@ export default async function page({
   return (
     <div className='flex flex-col'>
       <Hero t={dictionary.hero} />
-      <About  t={dictionary.about}/>
+      <About t={dictionary.about} />
       <CTA t={dictionary.cta} />
-      <Contact t = {dictionary.contact}/>
+      <Contact t={dictionary.contact} />
     </div>
-  )
+  );
 }

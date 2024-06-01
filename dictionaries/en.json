@@ -6,9 +6,7 @@
 	"hero": {
 		"title": "Name Your Price. Get Your Deal",
 		"subtitle": "Tell us what you want and how much you want to pay, we'll negotiate with every store for you — that's it!",
-		"comingSoonText": " COMING SOON ON",
-		"appStoreText": "App Store",
-		"googlePlayText": "Google Play"
+		"comingSoonText": " COMING SOON ON"
 	},
 	"cta": {
 		"title": "Budggy is ready to go wherever you are!",

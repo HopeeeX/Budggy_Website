@@ -7,9 +7,10 @@ const nextConfig = {
 
 
 	//Comment this section when developing.
-	// images: {
-	// 	unoptimized: true
-	// },
+	images: {
+		unoptimized: true
+	},
+	output: "export"
 };
 
 // export default nextConfig

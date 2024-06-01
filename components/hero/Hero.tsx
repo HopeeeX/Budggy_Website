@@ -2,14 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import { useParams } from 'next/navigation';
+import { inter } from "@/lang";
 
 interface HeroProps {
 	t: {
 		title: string;
 		subtitle: string;
 		comingSoonText: string;
-		appStoreText: string;
-		googlePlayText: string;
 	};
 }
 
@@ -47,8 +46,8 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
 						</div>
 						<div className="flex flex-col gap-0">
 							<div>
-								<h1 className="text-[15px] text-white font-normal leading-4 tracking-tighter">
-									{t.appStoreText}
+								<h1 className={`${inter.className} text-[15px] text-white font-normal leading-4 tracking-tighter`}>
+									App Store
 								</h1>
 							</div>
 						</div>
@@ -67,8 +66,8 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
 						</div>
 						<div className="flex flex-col gap-0">
 							<div>
-								<h1 className="text-[15px] text-white font-normal leading-4 tracking-tighter">
-									{t.googlePlayText}
+								<h1 className={`${inter.className} text-[15px] text-white font-normal leading-4 tracking-tighter`}>
+									Google Play
 								</h1>
 							</div>
 						</div>

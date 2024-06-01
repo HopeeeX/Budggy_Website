@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import illustration_ar from "@/public/ar/assets/images/cta-illustration-ar.png"
+import { inter } from '@/lang';
 
 interface CtaProps {
     t: {
@@ -23,7 +24,7 @@ const Cta: React.FC<CtaProps> = ({ t }) => {
                     <h3 className={`text-[16px] font-normal text-black text-center xl:w-[530px] ${lang == "en" ? "md:text-start" : "md:text-end md:self-end"}`}>{t.description}</h3>
                     <h2 className={`text-[#F79400] text-center text-[16px] font-bold tracking-widest mt-[40px] ${lang == "en" ? "md:text-start" : "md:text-end"}`}>{t.comingSoonText}</h2>
                     {/* Download Buttons */}
-                    <div className='flex flex-row gap-[12px] mt-[10px]'>
+                    <div className={`${inter.className} flex flex-row gap-[12px] mt-[10px]`}>
                         {/* Apple Store */}
                         <button className='w-[150px] h-[56px] flex flex-row justify-center items-center rounded-lg bg-[#FFFFFF] border border-[#090909] gap-[9px]'>
                             <div>

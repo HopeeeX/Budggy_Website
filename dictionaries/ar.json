@@ -6,9 +6,7 @@
 	"hero": {
 		"title": "حدد سعرك. خذ غرضك.",
 		"subtitle": "احكيلنا شو بدك، وكم حاب تدفع. رح نفاصل كل محل عندو غرضك من الشمال للجنوب عنك - هاي هي!",
-		"comingSoonText": "قريباً على",
-		"appStoreText": "App Store",
-		"googlePlayText": "Google Play"
+		"comingSoonText": "قريباً على"
 	},
 	"cta": {
 		"title": "وين ما كنت، Budggy معك.",

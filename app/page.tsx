@@ -15,9 +15,8 @@ const page = () => {
         }
     }, [pathname]);
   return (
-    <div>
-      
-    </div>
+    <body>
+    </body>
   )
 }
 
